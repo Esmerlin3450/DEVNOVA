@@ -139,13 +139,21 @@ nav a:hover {
 /* Adaptaciones para pantallas pequeñas */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
   }
 
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   header p {
