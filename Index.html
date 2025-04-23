@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVNOVA</title>
+  <link rel="stylesheet" href="C.css">
+  <link rel="icon" type="image/jpeg" href="DEVNOVAlogo.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <nav>
+    <a href="#quienes"><i class="fas fa-users"></i> Quiénes Somos</a>
+    <a href="#porque"><i class="fas fa-thumbs-up"></i> Por Qué Elegirnos</a>
+    <a href="#mision"><i class="fas fa-bullseye"></i> Misión</a>
+    <a href="#vision"><i class="fas fa-eye"></i> Visión</a>
+    <a href="#valores"><i class="fas fa-heart"></i> Valores</a>
+    <a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a>
+    <a href="#ubicacion"><i class="fas fa-map-marker-alt"></i> Ubicación</a>
+  </nav>
+
+  <header>
+    <h1>Bienvenido a DEVNOVA</h1>
+    <p>Innovación y desarrollo a tu alcance</p>
+  </header>
+
+  <main>
+    <div class="slider-container">
+      <div class="slider-wrapper" id="slider">
+        <section class="slider-section" id="quienes">
+          <h2>Quiénes somos</h2>
+          <p>En DEVNOVA, somos más que una empresa de software; somos artesanos digitales dedicados a
+             transformar ideas en soluciones 
+            innovadoras que impulsan tu negocio hacia el futuro.</p>
+            <br>
+            <p>Nos apasiona innovar, y entendemos que cada proyecto es una oportunidad única para romper barreras,
+               desafiar lo convencional y crear soluciones que sean tanto eficaces como visualmente atractivas. Nos mantenemos
+                al tanto de las últimas tendencias tecnológicas y las mejores prácticas de desarrollo para asegurarnos 
+                de ofrecer resultados que no solo resuelvan los problemas actuales, sino que también estén preparados para el futuro.</p>
+        </section>
+        <section class="slider-section" id="porque">
+          <h2>Por qué elegirnos</h2>
+          <p>Enfoque personalizado: Cada cliente es único. Escuchamos tus necesidades y creamos soluciones que 
+            realmente resuelven tus desafíos.</p>
+            <br>
+            <p>Innovación constante: Trabajamos con las tecnologías más avanzadas, asegurando que tu software 
+              sea escalable,seguro y a la vanguardia del mercado.
+              <br>
+              <p>Resultados medibles: Nos comprometemos a ofrecer servicios que no solo cumplen con los requisitos,
+                 sino que también ofrecen resultados tangibles y un retorno de inversión claro
+              </p>
+            </p>
+        </section>
+        <section class="slider-section" id="mision">
+          <h2>Misión</h2>
+          <p>En DEVNOVA, nuestra misión es transformar ideas en soluciones digitales innovadoras que potencien el 
+            éxito de nuestros clientes. A través de un enfoque personalizado y el uso de las últimas tecnologías, 
+            desarrollamos software intuitivo, eficiente y escalable, que no solo resuelve problemas, sino que abre
+             nuevas posibilidades para el crecimiento y la mejora continua de los negocios.</p>
+        </section>
+        <section class="slider-section" id="vision">
+          <h2>Visión</h2>
+          <p>Ser reconocidos como líderes en la innovación tecnológica y el desarrollo de software personalizado, brindando soluciones
+             que anticipen las necesidades del mercado y ayuden a las empresas a adaptarse y evolucionar en un mundo
+              digital en constante cambio. Aspiramos a ser la opción preferida de empresas que buscan llevar sus procesos y operaciones 
+              al siguiente nivel, mediante la creación de soluciones tecnológicas que transformen su futuro.</p>
+        </section>
+        <section class="slider-section" id="valores">
+          <h2>Valores</h2>
+          <ul>
+            <li><b>Innovación continua</b></li>
+            <br>
+            <li><b>Compromiso con la excelencia</b></li>
+            <br>
+            <li><b>Colaboración y transparencia</b></li>
+            <br>
+            <li><b>Adaptabilidad</b></li>
+            <br>
+            <li><b>Ética y responsabilidad</b></li>
+            <br>
+            <li><b>Orientación al cliente</b></li>
+          </ul>
+        </section>
+        <section class="slider-section" id="servicios">
+          <h2>Servicios</h2>
+          <div class="imagenes">
+            <img src="Service1.png" alt="Servicios DEVNOVA">
+            <img src="Service2.png" alt="Servicios DEVNOVA">
+            <img src="Service3.png" alt="Servicios DEVNOVA">
+          </div>
+        </section>
+        <section class="slider-section" id="ubicacion">
+          <h2>Ubicación</h2>
+          <p>Republica Dominicana - Dajabon - Barrio la paz...</p>
+        </section>
+      </div>
+      <div class="slider-nav">
+        <button onclick="moveSlide(-1)">&#10094;</button>
+        <button onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="contacto">
+    <h2>Contactos</h2>
+    <p><a href="https://www.instagram.com/devnova.studio1?igsh=MTJrZHM0eDd1aWs5Ng== " target="_blank">
+      <i class="fab fa-instagram fa-3x"></i>  </a></p>
+    <p><a href="https://www.instagram.com/devnova.studio1?igsh=MTJrZHM0eDd1aWs5Ng== " target="_blank">
+      <i class="fab fa-whatsapp fa-3x"></i>  </a></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DEVNOVA. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+  const slider = document.getElementById('slider');
+  const totalSlides = slider.children.length;
+  let autoSlideInterval;
+  let autoSlideDelay = 6000;
+  let userInteracted = false;
+
+  function moveSlide(step) {
+    slideIndex = (slideIndex + step + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+    userInteracted = true;
+    resetAutoSlide();
+  }
+
+  function autoSlide() {
+    if (!userInteracted) {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+    } else {
+      userInteracted = false; // resetea el flag para continuar en el siguiente ciclo
+    }
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, autoSlideDelay);
+  }
+
+  window.onload = () => {
+    autoSlideInterval = setInterval(autoSlide, autoSlideDelay);
+  };
+  </script>
+</body>
+</html>
