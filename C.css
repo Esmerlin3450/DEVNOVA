@@ -136,14 +136,20 @@ nav a:hover {
   text-align: center;
 }
 
-/* Adaptaciones para pantallas pequeñas */
+/* Estilos adaptativos para móviles mejorados */
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
   nav {
     overflow-x: auto;
     white-space: nowrap;
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 0.5rem;
+    gap: 1rem;
+    z-index: 1000;
   }
 
   nav a {
@@ -153,23 +159,34 @@ nav a:hover {
   }
 
   header h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    margin-top: 4rem;
   }
 
   header p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   main, section {
     padding: 1rem;
+    position: relative;
+    z-index: 1;
   }
 
   .slider-section {
     padding: 2rem 1rem;
+    z-index: 0;
   }
 
   img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .overlay, .text-content, .section-title {
+    position: relative;
+    z-index: 2;
   }
 }
