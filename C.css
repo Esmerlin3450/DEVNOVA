@@ -153,7 +153,7 @@ nav a:hover {
   }
 
  header {
-    padding-top: 8.5rem; /* Ajusta este valor según la altura real del nav */
+    padding-top: 4.5rem; /* Ajusta este valor según la altura real del nav */
   }
 
   header h1 {
@@ -179,6 +179,6 @@ nav a:hover {
   }
 
  body {
-    padding-top: 4.5rem; /* Para compensar el nav fijo en móviles */
+    padding-top: 5.5rem; /* Para compensar el nav fijo en móviles */
   }
 }
