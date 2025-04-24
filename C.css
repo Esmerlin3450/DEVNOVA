@@ -140,8 +140,8 @@ nav a:hover {
 /* Adaptaciones para pantallas pequeñas */
 @media (max-width: 768px) {
    nav {
-    position: fixed;
-    top: 1rem;
+   position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1000;
   }
@@ -153,7 +153,7 @@ nav a:hover {
   }
 
  header {
-    padding-top: 4.5rem; /* Ajusta este valor según la altura real del nav */
+ padding-top: 5.5rem; /* Antes 4.5rem, ahora un poco más */
   }
 
   header h1 {
@@ -179,6 +179,6 @@ nav a:hover {
   }
 
  body {
-    padding-top: 5.5rem; /* Para compensar el nav fijo en móviles */
+     padding-top: 5.5rem; /* Antes 4.5rem, ahora un poco más */
   }
 }
