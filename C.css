@@ -140,20 +140,25 @@ nav a:hover {
 /* Adaptaciones para pantallas pequeñas */
 @media (max-width: 768px) {
   nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    
-    overflow-x: auto;       /* <- Permite deslizar horizontalmente */
-    white-space: nowrap;    /* <- Evita que los enlaces bajen de línea */
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2e7d32;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow-x: auto;        /* <-- PERMITE EL SCROLL HORIZONTAL */
+  white-space: nowrap;     /* <-- EVITA QUE LOS ELEMENTOS SE SALTEN DE LÍNEA */
+  scroll-behavior: smooth; /* <-- SUAVIZA EL SCROLL */
+}
 
-  nav a {
-    display: inline-block;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
-  }
+nav a {
+  flex: 0 0 auto; /* <-- PERMITE QUE CADA LINK SE MANTENGA EN UNA SOLA LÍNEA Y SEA SCROLLEABLE */
+}
   
  header {
  padding-top: 0;
