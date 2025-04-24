@@ -10,7 +10,7 @@
 
 </head>
 <body>
-  <nav>
+  <nav id="mainNav">
     <a href="#quienes"><i class="fas fa-users"></i> Quiénes Somos</a>
     <a href="#porque"><i class="fas fa-thumbs-up"></i> Por Qué Elegirnos</a>
     <a href="#mision"><i class="fas fa-bullseye"></i> Misión</a>
@@ -115,7 +115,7 @@
   </footer>
 
   <script>
-    let slideIndex = 0;
+  let slideIndex = 0;
   const slider = document.getElementById('slider');
   const totalSlides = slider.children.length;
   let autoSlideInterval;
@@ -134,7 +134,7 @@
       slideIndex = (slideIndex + 1) % totalSlides;
       slider.style.transform = `translateX(-${slideIndex * 100}%)`;
     } else {
-      userInteracted = false; // resetea el flag para continuar en el siguiente ciclo
+      userInteracted = false;
     }
   }
 
@@ -145,6 +145,15 @@
 
   window.onload = () => {
     autoSlideInterval = setInterval(autoSlide, autoSlideDelay);
+
+    // === NUEVO: Ajustar margen del header automáticamente según la altura del nav ===
+    const nav = document.getElementById('mainNav'); // Asegúrate de que tu <nav> tenga este ID
+    const header = document.querySelector('header');
+
+    if (nav && header) {
+      const navHeight = nav.offsetHeight;
+      header.style.marginTop = navHeight + 'px';
+    }
   };
   </script>
 </body>
