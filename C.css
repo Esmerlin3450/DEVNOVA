@@ -139,18 +139,21 @@ nav a:hover {
 
 /* Adaptaciones para pantallas pequeñas */
 @media (max-width: 768px) {
-  nav {
-    overflow-x: auto;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding: 0.5rem;
+   nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   nav a {
     display: inline-block;
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
+  }
+
+ header {
+    padding-top: 4.5rem; /* Ajusta este valor según la altura real del nav */
   }
 
   header h1 {
@@ -173,5 +176,9 @@ nav a:hover {
   img {
     max-width: 100%;
     height: auto;
+  }
+
+ body {
+    padding-top: 4.5rem; /* Para compensar el nav fijo en móviles */
   }
 }
