@@ -143,21 +143,23 @@ nav a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #2e7d32;
-  color: white;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.60rem;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  overflow-x: auto;        /* <-- PERMITE EL SCROLL HORIZONTAL */
-  white-space: nowrap;     /* <-- EVITA QUE LOS ELEMENTOS SE SALTEN DE LÍNEA */
-  scroll-behavior: smooth; /* <-- SUAVIZA EL SCROLL */
+
+  overflow-x: auto;
+  white-space: nowrap;
+  
+  /* Nuevos ajustes */
+  max-width: 100vw;       /* Evita que se corte en pantallas pequeñas */
+  overflow-y: hidden;     /* Para que no haya scroll vertical inesperado */
+  padding-bottom: 1rem;   /* Da espacio a los elementos más bajos si lo necesitan */
+  box-sizing: border-box; /* Asegura que el padding no aumente el tamaño real */
 }
 
 nav a {
-  flex: 0 0 auto; /* <-- PERMITE QUE CADA LINK SE MANTENGA EN UNA SOLA LÍNEA Y SEA SCROLLEABLE */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  white-space: nowrap;      /* Evita que el texto se parta en dos líneas */
 }
   
  header {
