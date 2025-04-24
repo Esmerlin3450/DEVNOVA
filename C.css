@@ -139,11 +139,14 @@ nav a:hover {
 
 /* Adaptaciones para pantallas pequeñas */
 @media (max-width: 768px) {
-   nav {
-   position: fixed;
+  nav {
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    
+    overflow-x: auto;       /* <- Permite deslizar horizontalmente */
+    white-space: nowrap;    /* <- Evita que los enlaces bajen de línea */
   }
 
   nav a {
@@ -151,7 +154,7 @@ nav a:hover {
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
   }
-
+  
  header {
  padding-top: 0;
   }
